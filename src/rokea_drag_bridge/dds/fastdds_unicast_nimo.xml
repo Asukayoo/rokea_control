@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- WiFi often blocks multicast; peer unicast to Jetson (nimo-012). -->
+<dds>
+  <profiles xmlns="http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles">
+    <participant profile_name="unicast_peer" is_default_profile="true">
+      <rtps>
+        <builtin>
+          <initialPeersList>
+            <locator>
+              <udpv4>
+                <address>192.168.0.12</address>
+              </udpv4>
+            </locator>
+          </initialPeersList>
+        </builtin>
+      </rtps>
+    </participant>
+  </profiles>
+</dds>

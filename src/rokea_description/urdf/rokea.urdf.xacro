@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rokea">
+  <!--
+    Rokea dual-arm torso (self-contained description package).
+
+    base_link:
+      origin — support-plate bottom center
+      Z      — column up
+      Y      — top ring hole axis
+      X      — forward
+
+    Top-center ring hole (m):
+      midplane (0, 0, 1.240263)
+      left  on +Y face: Z_arm -> +Y
+      right on -Y face: Z_arm -> -Y
+  -->
+
+  <xacro:property name="mount_z" value="1.2402628"/>
+  <xacro:property name="mount_y_face" value="0.025"/>
+
+  <material name="black"><color rgba="0 0 0 1"/></material>
+  <material name="blue"><color rgba="0 0 0.8 1"/></material>
+  <material name="green"><color rgba="0 0.8 0 1"/></material>
+  <material name="grey"><color rgba="0.2 0.2 0.2 1"/></material>
+  <material name="orange"><color rgba="1.0 0.4235 0.0392 1"/></material>
+  <material name="brown"><color rgba="0.8706 0.8118 0.7647 1"/></material>
+  <material name="red"><color rgba="0.8 0 0 1"/></material>
+  <material name="white"><color rgba="1 1 1 1"/></material>
+  <material name="Beige"><color rgba="1 0.784 0.5765 1"/></material>
+  <material name="torso_grey"><color rgba="0.55 0.55 0.58 1"/></material>
+
+  <link name="base_link"/>
+
+  <link name="torso_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rokea_description/meshes/torso/torso.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="torso_grey"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rokea_description/meshes/torso/torso.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_to_torso" type="fixed">
+    <parent link="base_link"/>
+    <child link="torso_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <xacro:include filename="arms/left_arm.xacro"/>
+  <xacro:include filename="arms/right_arm.xacro"/>
+  <xacro:rokea_left_arm/>
+  <xacro:rokea_right_arm/>
+
+  <joint name="torso_to_left_arm" type="fixed">
+    <parent link="base_link"/>
+    <child link="AR3-3_07L-W4C5C5_base"/>
+    <origin xyz="0 ${mount_y_face} ${mount_z}" rpy="${-pi/2} 0 0"/>
+  </joint>
+
+  <joint name="torso_to_right_arm" type="fixed">
+    <parent link="base_link"/>
+    <child link="AR3-3_07R-W4C5C5_base"/>
+    <origin xyz="0 ${-mount_y_face} ${mount_z}" rpy="${pi/2} 0 0"/>
+  </joint>
+</robot>

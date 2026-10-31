@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="640">
+<style>text{font-family:sans-serif;font-size:12px}</style>
+<text x="320" y="22" text-anchor="middle" font-size="14">Top view SE–EW (repulsion)</text>
+<ellipse cx="278.4" cy="358.6" rx="137.1" ry="154.3" fill="#eee" stroke="#bbb" stroke-width="1.5" stroke-dasharray=""/>
+<ellipse cx="278.4" cy="358.6" rx="164.5" ry="185.1" fill="none" stroke="#666" stroke-width="1.5" stroke-dasharray="4 3"/>
+<circle cx="278.4" cy="158.0" r="3" fill="#1f77b4"/>
+<circle cx="292.1" cy="158.0" r="3" fill="#1f77b4"/>
+<circle cx="544.3" cy="158.0" r="3" fill="#1f77b4"/>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2" points="278.4,158.0 292.1,158.0 544.3,158.0"/>
+<text x="60" y="40" fill="#1f77b4">s=0.00 φ=0.045</text>
+<circle cx="278.4" cy="158.0" r="3" fill="#ff7f0e"/>
+<circle cx="310.7" cy="180.1" r="3" fill="#ff7f0e"/>
+<circle cx="544.3" cy="286.6" r="3" fill="#ff7f0e"/>
+<polyline fill="none" stroke="#ff7f0e" stroke-width="2" points="278.4,158.0 310.7,180.1 544.3,286.6"/>
+<text x="60" y="56" fill="#ff7f0e">s=0.13 φ=0.024</text>
+<circle cx="278.4" cy="158.0" r="3" fill="#2ca02c"/>
+<circle cx="370.9" cy="212.4" r="3" fill="#2ca02c"/>
+<circle cx="544.3" cy="415.1" r="3" fill="#2ca02c"/>
+<polyline fill="none" stroke="#2ca02c" stroke-width="2" points="278.4,158.0 370.9,212.4 544.3,415.1"/>
+<text x="60" y="72" fill="#2ca02c">s=0.25 φ=0.021</text>
+<circle cx="278.4" cy="158.0" r="3" fill="#d62728"/>
+<circle cx="414.4" cy="334.9" r="3" fill="#d62728"/>
+<circle cx="544.3" cy="538.6" r="3" fill="#d62728"/>
+<polyline fill="none" stroke="#d62728" stroke-width="2" points="278.4,158.0 414.4,334.9 544.3,538.6"/>
+<text x="60" y="88" fill="#d62728">s=0.37 φ=-0.022</text>
+</svg>

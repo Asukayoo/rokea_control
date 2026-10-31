@@ -1,0 +1,26 @@
+# Colcon / CMake build artifacts
+**/build/
+ws/build/
+ws/install/
+ws/log/
+ws/src/
+
+# Runtime logs
+logs/
+_rokae_log_/
+**/logs/
+**/_rokae_log_/
+
+# Python
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Duplicate vendor archive (extracted tree kept under docs/rokea_docs)
+docs/rokea_docs/**/*.zip
